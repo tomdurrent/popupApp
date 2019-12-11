@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Download SERO Flight Wallet For Mobile - SERO</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.min.css">
+    <link rel="stylesheet" href="./css/down.css">
+    <script src="js/jquery-1.11.1.min.js" type="javascript"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .weixin-tip {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            filter: alpha(opacity=80);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .weixin-tip p {
+            text-align: center;
+            margin-top: 10%;
+            padding: 0 5%;
+        }
+    </style>
+</head>
+
+<body>
+<img src="img/iconss.jpg" width="0" height="0"/>
+<div class="weixin-tip">
+    <p>
+        <img src="./img/tip.png" alt="在浏览器打开"/>
+    </p>
+</div>
+<div class="highlight-clean">
+    <div class="container" style="font-size: 14px;">
+
+        <div class="download-content" style="text-align: center">
+            <div class="download_card" style="width: 100%">
+                <div class="content" style="text-align: center">
+                    <div class="title"><i class="web-font">Download <strong>SERO Flight Wallet</strong> For
+                        Mobile</i></div>
+                    <div class="desc"></div>
+                    <div class="list">
+
+                        <div id="android_version" class="item">
+                            <a href="https://raw.githubusercontent.com/sero-cash/sero-flight-wallet/master/app/pkg/v0.1.0-beta.1/flight.sero.cash-v010-beta1-android.apk">
+                                <i class="iconfont"><img src="img/flight-android.svg"/></i>
+                            </a>
+                            <p>Android</p>
+                            <!--<div class="modal" style="display: none;">-->
+                            <!--<div class="qr_code"><img src="img/flight-android.svg"/></div>-->
+                            <!--<p>扫描二维码</p>-->
+                            <!--<p>下载Android客户端</p>-->
+                            <!--</div>-->
+                        </div>
+                        </a>
+
+                        <div id="ios_version" class="item">
+                            <a href="itms-services://?action=download-manifest&url=https://sero.cash/app/files/manifest.plist">
+                                <i class="iconfont"><img src="img/flight-ios.svg"/></i>
+                            </a>
+                            <p>iPhone</p>
+                            <!--<div class="modal" style="display: none;">-->
+                            <!--<div class="qr_code"><img src="img/flight-ios.svg"/></div>-->
+                            <!--<p>扫描二维码</p>-->
+                            <!--<p>下载iPhone客户端</p>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone">
+                    <div class="screen">
+                        <div class="dd-download-pic"></div>
+                        <!-- <div id="side_code"></div> -->
+                        <p>Scan QR code</p>
+                        <p>Download mobile client</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+    $(function () {
+        var winHeight = $(window).height();
+
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf('micromessenger')>-1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        var isWeixin = is_weixin();
+        if (isWeixin) {
+            $(".weixin-tip").css("height", winHeight);
+            $(".weixin-tip").show();
+        }else{
+
+            $(".highlight-clean").hide();
+            $(".weixin-tip").css("backgroud", 'white');
+            window.location.href = 'https://aifabu.com/zQfQ';
+        }
+    })
+</script>
+</html>
